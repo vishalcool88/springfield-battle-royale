@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Springfield Battle Royale</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { overflow: hidden; background: #87ceeb; font-family: "Trebuchet MS", sans-serif; }
+      canvas { display: block; }
+
+      /* A small hint bar. The game is ALREADY running behind it --
+         this doesn't block anything, and it fades away once you
+         click to switch on smooth mouse aiming. */
+      #hint {
+        position: fixed;
+        left: 50%;
+        bottom: 178px; /* clears the health bar and weapon slots below it */
+        transform: translateX(-50%);
+        z-index: 10;
+        padding: 9px 20px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.22);
+        color: #fff;
+        font-size: 15px;
+        text-align: center;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+        pointer-events: none;
+        transition: opacity 0.4s;
+        line-height: 1.6;
+      }
+      #hint b { color: #ffd90f; }
+      .hidden { display: none !important; }
+      .fadeout { opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="hint">
+      <b>W A S D</b> run &nbsp;·&nbsp; <b>Arrows</b> look &nbsp;·&nbsp; <b>Space</b> jump
+      &nbsp;·&nbsp; <b>Shift</b> sprint<br />
+      <b>E</b> open chest / grab gun &nbsp;·&nbsp; <b>1 2 3</b> swap weapon
+      &nbsp;·&nbsp; <b>R</b> reload &nbsp;·&nbsp; <b>Click</b> shoot<br />
+      <span style="opacity: 0.85">Press <b>H</b> any time for the full controls list</span>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
