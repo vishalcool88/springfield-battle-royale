@@ -20,3 +20,5 @@ npm-debug.log*
 # README, but don't commit every PNG. Delete this line if you WANT to
 # store your promo shots in the repo.
 screenshots/*.png
+dist
+.vercel
